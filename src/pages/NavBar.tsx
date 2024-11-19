@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Flex,
@@ -29,7 +27,6 @@ const NavLink = (props: Props) => {
 
   return (
     <Box
-      as="a"
       px={2}
       py={1}
       rounded={"md"}
@@ -38,8 +35,7 @@ const NavLink = (props: Props) => {
         bg: useColorModeValue("gray.200", "gray.700"),
       }}
     >
-      <RouterLink to={to}></RouterLink>
-      {children}
+      <RouterLink to={to}>{children}</RouterLink>
     </Box>
   );
 };
